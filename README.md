@@ -8,7 +8,7 @@ Se aprueba con:         6
 
 ### Objetivos
 
-- Que aprendar a modelar un problema de un dominio no-trivial.
+- Que aprendan a modelar un problema de un dominio no-trivial.
 - Que aprendan a documentar el trabajo realizado.
 - Que practiquen trabajar en equipo con gente desconocida.
 
@@ -62,9 +62,9 @@ Les voy a estar mandando horarios para que cada pareja se conecte y tengamos la 
 
 ## Aplicaciones
 
-1. ASD
-2. 
-3. 
-4. 
-5. 
-6. 
+1. [app1.md](Scrapper de precios de Mercado Libre)
+2. [app2.md](Gestor de contraseñas online)
+3. [app3.md](Interprete de JavaScript online)
+4. [app4.md](Scrapper de imagenes de Instagram)
+5. [app5.md](Organizador de viajes usando AI)
+6. [app6.md](Nuestro propio eCommerce)
