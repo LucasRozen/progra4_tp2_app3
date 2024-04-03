@@ -62,9 +62,9 @@ Les voy a estar mandando horarios para que cada pareja se conecte y tengamos la 
 
 ## Aplicaciones
 
-1. [app1.md](Scrapper de precios de Mercado Libre)
-2. [app2.md](Gestor de contraseñas online)
-3. [app3.md](Interprete de JavaScript online)
-4. [app4.md](Scrapper de imagenes de Instagram)
-5. [app5.md](Organizador de viajes usando AI)
-6. [app6.md](Nuestro propio eCommerce)
+1. [Scrapper de precios de Mercado Libre](app1.md)
+2. [Gestor de contraseñas online](app2.md)
+3. [Interprete de JavaScript online](app3.md)
+4. [Scrapper de imagenes de Instagram](app4.md)
+5. [Organizador de viajes usando AI](app5.md)
+6. [Nuestro propio eCommerce](app6.md)
