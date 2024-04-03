@@ -3,8 +3,7 @@
 ## Metodología
 
 Integrantes por equipo: 2
-
-Se aprueba con:         6
+Se aprueba con: 6
 
 ### Objetivos
 
@@ -22,9 +21,9 @@ Quiero darles la mayor libertad posible para que los resuelvan como quieran. Inc
 - Todos los tipos de datos sean estáticos (o sea, que no haya ningún `any`)
 - Me justifiquen en el oral por qué les pareció mejor opción que lo que vimos en clase
 
-Todos los ejercicios van a ser ejecutables en consola nada más. Debe haber un comando en `package.json` que lo ejecute. No vamos a recibir ningun request (para eso esta el TP3) ni a agregar ningún HTML o estilo a nada de esto (para eso esta el TP4). De nuevo, como lo que hicimos en clase.
+Todos los ejercicios van a ser ejecutables en consola nada más. Debe haber un comando en `package.json` que lo ejecute. No vamos a recibir ningún pedido de HTTP (para eso esta el TP3) ni a agregar ningún HTML o estilo a nada de esto (para eso esta el TP4). De nuevo, como lo que hicimos en clase.
 
-Pueden asumir cosas que no están aclaradas explícitamente. De hecho, espero que lo hagan. Hice a propósito los enunciados un poco ambiguos. Lo que consideren que asumieron y no fue trivial, recomiendo fuertemente documentarlo. Sus compañeros van a tener que trabajar sobre eso en los proximos TPs.
+Pueden asumir cosas que no están aclaradas explícitamente. De hecho, espero que lo hagan. Hice a propósito los enunciados un poco ambiguos. Lo que consideren que asumieron y no fue trivial, recomiendo fuertemente documentarlo. Sus compañeros van a tener que trabajar sobre eso en los próximos TPs.
 
 Recuerden que, por lo general, la solución más simple es la mejor.
 
@@ -34,25 +33,25 @@ Recuerden que, por lo general, la solución más simple es la mejor.
 
 ### Fecha
 
-La fecha límite es el Jueves ??? de Abril de 2024 a las 23:59 hs. Agreguen una `tag` en el repositorio que se llame `tp2`. Ese commit es el que voy a corregir. Si quieren cambiar una `tag` para que apunte a otro commit, probablemente van a tener que primero borrar la existente y despues crearla de nuevo.
+La fecha límite es el Jueves ??? de Abril de 2024 a las 23:59 hs. Agreguen una `tag` en el repositorio que se llame `tp2`. Ese commit es el que voy a corregir. Si quieren cambiar una `tag` para que apunte a otro commit, probablemente van a tener que primero borrar la existente y después crearla de nuevo.
 
-Por favor, mandenme un mail a <me@diegofreijo.com> cuando lo tengan listo.
+Por favor, mándenme un mail a <me@diegofreijo.com> cuando lo tengan listo.
 
 ### Código
 
-Todo lo van a resolver en un repositorio de GitHub. Ya los cree yo. Me falta agregar a cada participante a su aplicacion.
+Todo lo van a resolver en un repositorio de GitHub. Ya los cree yo. Me falta agregar a cada participante a su aplicación.
 
-Les voy a pedir que el codigo que suban al repo sea un esquelo de una aplicacion MVC, como la que hicimos en clase de los cocineros para repartirnos las parejas. Es decir, que los 3 modulos esten bien definidos. Y adonde van a dedicar la mayor parte del tiempo va a ser el Modelo: que tenga los tipos de datos del dominio definidos y que posea funciones para resolver los casos de uso del enunciado.
+Les voy a pedir que el código que suban al repo sea un esqueleto de una aplicación MVC, como la que hicimos en clase de los cocineros para repartirnos las parejas. Es decir, que los 3 módulos estén bien definidos. Y adonde van a dedicar la mayor parte del tiempo va a ser el Modelo: que tenga los tipos de datos del dominio definidos y que posea funciones para resolver los casos de uso del enunciado.
 
-El controlador va a solamente recibir lo que diga `index.ts` y pasar ciertos parametros de prueba. La vista va a escribir en consola algo bien crudo.
+El controlador va a solamente recibir lo que diga `index.ts` y pasar ciertos parámetros de prueba. La vista va a escribir en consola algo bien crudo.
 
-### GitFlow
+### Git Flow
 
-Les voy a pedir que usen la version reducida de GitFlow que explique en la clase 2. Si crearon branches por feature, no los borren. Así puedo ver cómo estuvieron trabajando.
+Les voy a pedir que usen la versión reducida de Git Flow que explique en la clase 2. Si crearon branches por funcionalidad, no los borren. Así puedo ver cómo estuvieron trabajando.
 
 ### Reporte
 
-El reporte va a ser otra parte importante de esta entrega. Les pido que tenga el formato del que vimos de ejemplo en clase o algo similar. Lo mas importante es que aclaren todo lo que le haga la vida mas facil a los que despues van a tener que agregarle un backend y un frontend. Va a ser un archivo de MarkDown. Puede ser el `README.md` o algun otro archivo que quede clarisimo cual es para alguien que recien entra al repo. No se olviden de aclarar la forma de uso del codigo que hicieron (por ejemplo, que comando de `npm` ejecutar en cada caso).
+El reporte va a ser otra parte importante de esta entrega. Les pido que tenga el formato del que vimos de ejemplo en clase o algo similar. Lo mas importante es que aclaren todo lo que le haga la vida mas fácil a los que después van a tener que agregarle un backend y un frontend. Va a ser un archivo de Mark Down. Puede ser el `README.md` o algún otro archivo que quede clarísimo cual es para alguien que recién entra al repo. No se olviden de aclarar la forma de uso del código que hicieron (por ejemplo, que comando de `npm` ejecutar en cada caso).
 
 ### Defensa
 
@@ -61,6 +60,8 @@ Les voy a estar mandando horarios para que cada pareja se conecte y tengamos la 
 ----
 
 ## Aplicaciones
+
+Cada aplicación esta escrita como lo diría el cliente. Excepto en las notas, que son las que arrancan con `>` en Mark Down.
 
 1. [Scrapper de precios de Mercado Libre](app1.md)
 2. [Gestor de contraseñas online](app2.md)
