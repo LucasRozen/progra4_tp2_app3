@@ -33,7 +33,7 @@ Recuerden que, por lo general, la solución más simple es la mejor.
 
 ### Fecha
 
-La fecha límite es el Jueves ??? de Abril de 2024 a las 23:59 hs. Agreguen una `tag` en el repositorio que se llame `tp2`. Ese commit es el que voy a corregir. Si quieren cambiar una `tag` para que apunte a otro commit, probablemente van a tener que primero borrar la existente y después crearla de nuevo.
+La fecha límite es el Miércoles 24 de Abril de 2024 a las 23:59 hs. Agreguen una `tag` en el repositorio que se llame `tp2`. Ese commit es el que voy a corregir. Si quieren cambiar una `tag` para que apunte a otro commit, probablemente van a tener que primero borrar la existente y después crearla de nuevo.
 
 Por favor, mándenme un mail a <me@diegofreijo.com> cuando lo tengan listo.
 
