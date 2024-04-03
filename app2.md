@@ -8,5 +8,4 @@ Crear contraseñas seguras es un bardo. Quiero que la aplicación lo haga por mi
 
 Me entere que hay listas de contraseñas dando vueltas por ahí. No me gastaría enterarme que alguna de mis contraseñas andan dando vueltas por por la internet. Necesito que la aplicación se asegure que todas mis claves son privadas y ninguna fue comprometida!
 
-> [!NOTE] Nota de Diego
-> Esto ultimo se puede saber llamando a una API: https://haveibeenpwned.com/API/v3
+> Esto ultimo se puede saber llamando a una API: <https://haveibeenpwned.com/API/v3>

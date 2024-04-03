@@ -8,5 +8,4 @@ La aplicación me debería armar un cronograma por día, donde me explique que h
 
 Y quiero poder tener varios viajes, que la aplicación me los guarde todos para poder volver a ellos cuando quiera.
 
-> [!NOTE] Nota de Diego
-> Todo el trabajo pesado lo va a hacer una AI. ChatGPT es una posbilidad, pero hay mas. Van a necesitar aprender como se usan como si fuesen una API. Y ver mas o menos que consultas agregar a las del usuario para que les devuelva la informacion en el formato que necesitan.
+> Todo el trabajo pesado lo va a hacer una AI. ChatGPT es una posibilidad, pero hay mas. Van a necesitar aprender como se usan como si fuesen una API. Y ver mas o menos que consultas agregar a las del usuario para que les devuelva la información en el formato que necesitan.

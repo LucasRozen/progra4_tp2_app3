@@ -12,5 +12,4 @@ No voy a actualizar los precios todos los días, a menos que haya un salto muy i
 
 Me gastaría saber que productos fueron los que mas aumentaron de precio, en porcentaje, durante la semana. Algún reporte de eso me vendría bien.
 
-> [!NOTE] Nota de Diego
 > No hace falta que hagan todas las optativas, pero tienen que elegir al menos una.

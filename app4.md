@@ -8,5 +8,4 @@ Ahora que lo pienso, tengo mucha gente a la que quiero ~~stalkear~~ saber si and
 
 A la hora de ver las fotos de cierto usuario, me gastaría verlas en alguna suerte de galería. Parecido a Instagram.
 
-> [!NOTE] Nota de Diego
 > Pueden cambiar Instagram por Twitter, Facebook o hasta LinkedIn.
