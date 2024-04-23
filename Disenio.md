@@ -17,6 +17,11 @@ Las aplicaciones que voy a escribir ahí son de consola. Así que toda forma de 
 Optativa 1
 Necesito que todo código que ejecuto se guarde en algún lado, de alguna manera. Así puedo fácilmente volver a abrir un código antiguo para editarlo y volver a ejecutarlo.
 
+## Explicación del problema
+
+- El cliente quiere una aplicación que le deje escribir código Javascript, ejecutarlo con un botón y que el resultado salga por consola.
+- Además quiere que cada vez que ejecute su código este se guarde y que pueda volver a él después de haber seguido codeando. O sea que pueda volver a las distintas versiones que se vayan guardando y seguir trabajando con ellas.
+
 ## Investigación
 
 ### ¿Qué es un editor de código?
@@ -25,17 +30,27 @@ Un editor de código es una herramienta de software diseñada para facilitar la 
 ### ¿Qué es Mónaco Editor? ¿Cómo funciona? ¿Para qué nos sirve en nuestro proyecto?
 Monaco Editor es una librería que te permite colocar un editor de código en tu aplicación web. Funciona perfecto con React y Next.js.
 
-Decidimos utilizar mónaco editor, ya que, esta página lo cataloga como el mejor entre la competencia: ace-code-editor vs codeflask vs codejar vs codemirror vs monaco-editor | npm trends
+Decidimos utilizar mónaco editor, ya que, esta página lo cataloga como el mejor entre la competencia: [text](https://npmtrends.com/ace-code-editor-vs-codeflask-vs-codejar-vs-codemirror-vs-monaco-editor)
 
 Codejar también nos parece una buena opción, nos definimos por Monaco Editor porque había más documentación.
 
 Este documento explica el paso a paso para usar Monaco Editor: [text][Tutorial Monaco Editor]
+[Tutorial Monaco Editor]: https://docs.google.com/document/d/1f-F-Xr3h_KwFhkJ9zkPb78bRysInKhrQiqzBDUR5ox8/edit?usp=sharing
 
 ## Decisiones de Modelado
 
-- `Codigo` que va a ser el código que escriba el usuario.
-- `VersionesDeCodigo` que van a ser las distintas versiones de `Codigo` que vaya ejecutando el usuario
-- `EditorDeCodigo` que va a ser el contenedor donde el usuario escriba el `Codigo`
-- `ResultadoDeCodigo` que va a ser lo que se muestre como resultado de la ejecución de `Codigo`
+### Entidades:
+- `Codigo` que va a tener el código que escriba el usuario y la fecha en la cual se ejecutó.
+- `VersionesDeCodigo` que van a ser las distintas versiones de `Codigo` que vaya ejecutando el usuario.
+- `EditorDeCodigo` que va a ser el contenedor donde el usuario escriba el `Codigo`. Acá van a tener las propiedades que sirvan del objeto que les devuelva Monaco Editor, así solo se quedan con los datos necesarios.
 
-[Tutorial Monaco Editor]: https://docs.google.com/document/d/1f-F-Xr3h_KwFhkJ9zkPb78bRysInKhrQiqzBDUR5ox8/edit?usp=sharing
+### Relaciones:
+- **VersionesDeCodigo** tiene muchos **Codigo**s
+- **EditorDeCodigo** tiene un **Codigo**
+
+### Reglas:
+- El código que escriba el usuario tiene que ser código **Javascript** 
+- El código que escriba el usuario debe ejecutarse con un **botón**
+- El resultado de la ejecución del código debe aparecer en **consola**
+
+
