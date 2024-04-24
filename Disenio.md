@@ -19,8 +19,8 @@ Necesito que todo código que ejecuto se guarde en algún lado, de alguna manera
 
 ## Explicación del problema
 
-- El cliente quiere una aplicación que le deje escribir código Javascript, ejecutarlo con un botón y que el resultado salga por consola.
-- Además quiere que cada vez que ejecute su código este se guarde y que pueda volver a él después de haber seguido codeando. O sea que pueda volver a las distintas versiones que se vayan guardando y seguir trabajando con ellas.
+- El cliente quiere una aplicación que le deje escribir código Javascript, ejecutarlo con un botón y que el resultado salga en la misma aplicación.
+- Además quiere que cada vez que ejecute su código éste se guarde y pueda volver a él después de haber seguido codeando. O sea que pueda volver a cualquiera de las distintas versiones que se vayan guardando y seguir trabajando con ellas.
 
 ## Investigación
 
@@ -30,7 +30,7 @@ Un editor de código es una herramienta de software diseñada para facilitar la 
 
 ### ¿Qué es Mónaco Editor? ¿Cómo funciona? ¿Para qué nos sirve en nuestro proyecto?
 
-Monaco Editor es una librería que te permite colocar un editor de código en tu aplicación web. Funciona perfecto con React y Next.js.
+Monaco Editor es una librería que te permite colocar un editor de código en tu aplicación web. Funciona perfecto con React y NextJs.
 
 Decidimos utilizar mónaco editor, ya que, esta página lo cataloga como el mejor entre la competencia: (<https://npmtrends.com/ace-code-editor-vs-codeflask-vs-codejar-vs-codemirror-vs-monaco-editor>)
 
@@ -43,27 +43,25 @@ En este tutorial se menciona que *para poder ejecutar el código que escribe el 
 
 ### Entidades
 
-- `Codigo`: Es la entidad que va a tener el código que escriba el usuario y la fecha en la cual se ejecutó. La fecha se utiliza para poder identificar las versiones del código.
+- `VersionDeCodigo`: Es la entidad que va a tener el código que escriba el usuario y la fecha en la cual se ejecutó. La fecha se utiliza para poder identificar las versiones del código.
 - `VersionesDeCodigo`: Va a ser el listado de las distintas versiones del `Codigo` que vaya ejecutando el usuario.
-- `EditorDeCodigo`: Va a ser el contenedor donde el usuario escriba el `Codigo`. Acá van a tener las propiedades que sirvan del objeto que les devuelva Monaco Editor, así solo se quedan con los datos necesarios.
+- `EditorDeCodigo`: Va a ser el contenedor donde el usuario escriba el código. Acá van a tener las propiedades que sirvan del objeto que les devuelva Monaco Editor, así solo se quedan con los datos necesarios.
 
 ### Relaciones
 
-- **VersionesDeCodigo** tiene muchos **Codigo**s
-- **EditorDeCodigo** tiene un **Codigo**
+- `VersionesDeCodigo` tiene muchas `Version`(es)`DeCodigo`
 
 ### Reglas
 
 - El código que escriba el usuario tiene que ser código **Javascript**
 - El código que escriba el usuario debe ejecutarse con un **botón**
-- El resultado de la ejecución del código debe aparecer en **consola**
+- El resultado de la ejecución del código debe aparecer **en la misma aplicación**
 
 ### Métodos que expone el modelo
 
-Nos pareció que `Codigo` necesitaba acciones de:
+Nos pareció que `VersionDeCodigo` necesitaba acciones de:
 
 - **Creación:** Al ejecutar el código, se genera una nueva versión.
-- **Modificación:** Al volver a una versión anterior del código, el usuario debe poder editarla.
 
 Decidimos que `VersionesDeCodigo` necesitaba acciones de:
 
@@ -72,11 +70,12 @@ Decidimos que `VersionesDeCodigo` necesitaba acciones de:
 Decidimos que `EditorDeCodigo` necesitaba acciones de:
 
 - **Creación:** Al inicio de la aplicación se debe crear un nuevo editor de código.
-- **Consulta:** Acá el usuario consulta el editor de codigo con su valor (código) actual.
+- **Consulta:** Acá la aplicación trae el editor de código con su código actual. Sirve para que, cuando se cierre la aplicación y se vuelva a abrir más tarde, el código esté como se dejó la última vez.
+- **EjecutarCodigo:** Esta es la acción del editor de ejecutar el código que contiene en ese momento y mostrar el resultado.
 
 ### Notas
 
-- No necesitamos la acción ConsultarCodigo ya que cuando se consulta el listado de versiones de código ya se están trayendo la fecha y el valor de cada uno, entonces cuando se elije uno de ellos, el valor ya está disponible para ser mostrado dentro del editor y por lo tanto no hace falta consultarlo a la base de datos.
-- En la función `ModificarCodigo` se sobreescribe el código en la base de datos con la fecha en la cual el código fue modificado.
+- No necesitamos la acción ConsultarCodigo ya que, cuando se consulta el listado de versiones de código, ya se están trayendo la fecha y el valor de cada uno, entonces cuando se elije uno de ellos el valor ya está disponible para ser mostrado dentro del editor y por lo tanto no hace falta consultarlo a la base de datos.
+- No necesitamos la acción ModificarCodigo ya que cuando se selecciona una versión vieja del mismo y se modifica, al ejecutarlo se crea una nueva versión, no se sobreescribe la versión seleccionada.
 
 [Tutorial Monaco Editor]: https://docs.google.com/document/d/1f-F-Xr3h_KwFhkJ9zkPb78bRysInKhrQiqzBDUR5ox8/edit?usp=sharing
