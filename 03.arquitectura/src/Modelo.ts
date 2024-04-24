@@ -1,4 +1,4 @@
-export type Cocinero = string;
+/*export type Cocinero = string;
 export type Piso = { cocinero1: Cocinero, cocinero2: Cocinero };
 export type Torta = { nombre: string, piso1: Piso, piso2: Piso, piso3: Piso };
 export type Plan = { tortas: Torta[] };
@@ -35,57 +35,40 @@ export function crearPlan(cocineros: Cocinero[], nombresTortas: string[], semill
 
     const plan = { tortas };
     return plan;
+}*/
+
+export interface Codigo {
+  valor: string;
+  fecha: Date;
 }
 
-
-//////////////////////////////////////
-// Utilidades
-
-// Mapea numeroPiso a estos indices de cocineros
-// 1 -> 0, 1
-// 2 -> 2, 3
-// 3 -> 4, 5
-function armarPiso(cocineros: Cocinero[], numeroPiso: number): Piso {
-    return {
-        cocinero1: cocineros[(numeroPiso - 1) * 2],
-        cocinero2: cocineros[(numeroPiso - 1) * 2 + 1]
-    };
+export interface VersionesDeCodigo {
+  versiones: Codigo[];
 }
 
-
-// Desplaza los cocineros
-// Pares: 2 a la izquierda
-// 0 -> -2 -> 4
-// 2 -> 0
-// 4 -> 2
-
-// Impares: 2 a la derecha
-// 1 -> 3
-// 3 -> 5
-// 5 -> 7 -> 1
-function desplazarCocineros(cocineros: Cocinero[]): Cocinero[] {
-    var ret: Cocinero[] = [];
-    var direccion = -2;
-    for (let i = 0; i < cocineros.length; i++) {
-        const nuevoi = mod(i + direccion, cocineros.length);
-        ret[nuevoi] = cocineros[i];
-        direccion *= -1;
-    }
-    return ret;
+export interface EditorDeCodigo {
+  codigo: string;
+  /*acá van todas las propiedades que traiga la librería Monaco Editor
+  que consideren necesarias para la aplicación*/
 }
 
-function mezclar<T>(array: T[], semilla: number) {
-    // Un random que soporta semillas
-    var MersenneTwister = require('mersenne-twister');
-    var generator = new MersenneTwister(semilla);
+export function AgregarCodigo(codigo: string): Codigo {
+  //Agrega una versión del código a la base de datos
+}
 
-    return array.map((a) => ({ sort: generator.random(), value: a }))
-        .sort((a, b) => a.sort - b.sort)
-        .map((a) => a.value);
-};
+export function ModificarCodigo(codigo: string): Codigo {
+  //Sobreescribe el código en la base de datos con su nueva fecha
+}
 
+export function ConsultarVersionesDeCodigo(): VersionesDeCodigo {
+  /*Arma un listado que contiene todas las
+    versiones del código en la base de datos*/
+}
 
-// Funcion modulo que soporta negativos
-function mod(n: number, m: number): number {
-    return ((n % m) + m) % m;
+export function CrearEditorDeCodigo(): EditorDeCodigo {
+  //Logica proporcionada por Monaco Editor para crear un editor de codigo
+}
+
+export function ConsultarEditorDeCodigo(): EditorDeCodigo {
+  //Logica para consultar el codigo actual del editor en la base de datos
 }
