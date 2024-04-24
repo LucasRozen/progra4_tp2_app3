@@ -37,7 +37,6 @@ Decidimos utilizar mónaco editor, ya que, esta página lo cataloga como el mejo
 Codejar también nos parece una buena opción, nos definimos por Monaco Editor porque había más documentación.
 
 Este documento explica el paso a paso para usar Monaco Editor: [Tutorial Monaco Editor]
-[Tutorial Monaco Editor]: <https://docs.google.com/document/d/1f-F-Xr3h_KwFhkJ9zkPb78bRysInKhrQiqzBDUR5ox8/edit?usp=sharing>
 En este tutorial se menciona que *para poder ejecutar el código que escribe el usuario, van a tener que usar un motor de ejecución de javascript y así obtener el resultado y poder manejarlo*. Esto se encuentra en el punto cuatro de la documentación -> `4. Ejecución`.
 
 ## Decisiones de Modelado
@@ -79,3 +78,5 @@ Decidimos que `EditorDeCodigo` necesitaba acciones de:
 
 - No necesitamos la acción ConsultarCodigo ya que cuando se consulta el listado de versiones de código ya se están trayendo la fecha y el valor de cada uno, entonces cuando se elije uno de ellos, el valor ya está disponible para ser mostrado dentro del editor y por lo tanto no hace falta consultarlo a la base de datos.
 - En la función `ModificarCodigo` se sobreescribe el código en la base de datos con la fecha en la cual el código fue modificado.
+
+[Tutorial Monaco Editor]: https://docs.google.com/document/d/1f-F-Xr3h_KwFhkJ9zkPb78bRysInKhrQiqzBDUR5ox8/edit?usp=sharing
