@@ -53,9 +53,7 @@ En este tutorial se menciona que *para poder ejecutar el código que escribe el 
 
 ### Reglas
 
-- El código que escriba el usuario tiene que ser código **Javascript**
-- El código que escriba el usuario debe ejecutarse con un **botón**
-- El resultado de la ejecución del código debe aparecer **en la misma aplicación**
+- Validar que la lista de versiones de código no esté vacía
 
 ### Métodos que expone el modelo
 

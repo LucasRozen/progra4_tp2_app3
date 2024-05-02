@@ -9,12 +9,18 @@ export interface VersionesDeCodigo {
 
 export interface EditorDeCodigo {
   codigo: string;
-  /*acá van todas las propiedades que traiga la librería Monaco Editor
-  que consideren necesarias para la aplicación*/
+}
+
+export interface ResultadoDeCodigo{
+  resultado: string;
 }
 
 export function AgregarCodigo(codigo: string): Codigo {
   //Agrega una versión del código a la base de datos
+}
+
+export function EjecutarCodigo(codigo: string): string{
+  //Lógica para ejecutar el código y devolver el resultado
 }
 
 export function ConsultarVersionesDeCodigo(): VersionesDeCodigo {
@@ -23,14 +29,9 @@ export function ConsultarVersionesDeCodigo(): VersionesDeCodigo {
 }
 
 export function CrearEditorDeCodigo(): void {
-  //Logica proporcionada por Monaco Editor para crear un editor de codigo
+  //Lógica proporcionada por Monaco Editor para crear un editor de código
 }
 
 export function TraerEditorDeCodigo(): EditorDeCodigo {
-  //Logica para consultar el codigo actual del editor en la base de datos
-}
-
-export function EjecutarCodigo(codigo: string): void{
-  /*Logica para ejecutar el codigo (con ayuda de un 
-    motor de ejecución de Javascript) y mostrarlo*/
+  //Logica para consultar el código actual del editor en la base de datos
 }
