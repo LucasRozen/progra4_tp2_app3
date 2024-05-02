@@ -37,7 +37,12 @@ Decidimos utilizar mónaco editor, ya que, esta página lo cataloga como el mejo
 Codejar también nos parece una buena opción, nos definimos por Monaco Editor porque había más documentación.
 
 Este documento explica el paso a paso para usar Monaco Editor: [Tutorial Monaco Editor]
+
+### ¿Cómo se ejecuta código JavaScript?¿Qué es la función eval()?
+
 En este tutorial se menciona que *para poder ejecutar el código que escribe el usuario, van a tener que usar un motor de ejecución de javascript y así obtener el resultado y poder manejarlo*. Esto se encuentra en el punto cuatro de la documentación -> `4. Ejecución`.
+
+El código Javascript se ejecuta pasándoselo a una función nativa llamada `eval()`, que devuelve el resultado de la ejecución del código.
 
 ## Decisiones de Modelado
 
@@ -46,11 +51,12 @@ En este tutorial se menciona que *para poder ejecutar el código que escribe el 
 - `VersionDeCodigo`: Es la entidad que va a tener el código que escriba el usuario y la fecha en la cual se ejecutó. La fecha se utiliza para poder identificar las versiones del código.
 - `VersionesDeCodigo`: Va a ser el listado de las distintas versiones del `Codigo` que vaya ejecutando el usuario.
 - `EditorDeCodigo`: Va a ser el contenedor donde el usuario escriba el código. Acá van a tener las propiedades que sirvan del objeto que les devuelva Monaco Editor, así solo se quedan con los datos necesarios.
+- `ResultadoDeCodigo`: es la entidad que va a contener el resultado de la ejecución del código. Ej: si el código es `console.log(2+2)`, el resultado que se va a mostrar es 4.
 
 ### Relaciones
 
 - `VersionesDeCodigo` tiene muchas `Version`(es)`DeCodigo`
-
+ 
 ### Reglas
 
 - Validar que la lista de versiones de código no esté vacía
