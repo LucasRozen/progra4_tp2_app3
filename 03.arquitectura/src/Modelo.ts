@@ -15,7 +15,7 @@ export interface ResultadoDeCodigo{
   resultado: string;
 }
 
-export function AgregarCodigo(codigo: string): Codigo {
+export function AgregarCodigo(codigo: string): Void {
   //Agrega una versión del código a la base de datos
 }
 

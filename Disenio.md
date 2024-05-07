@@ -42,7 +42,9 @@ Este documento explica el paso a paso para usar Monaco Editor: [Tutorial Monaco 
 
 En este tutorial se menciona que *para poder ejecutar el código que escribe el usuario, van a tener que usar un motor de ejecución de javascript y así obtener el resultado y poder manejarlo*. Esto se encuentra en el punto cuatro de la documentación -> `4. Ejecución`.
 
-El código Javascript se ejecuta pasándoselo a una función nativa llamada `eval()`, que devuelve el resultado de la ejecución del código.
+Una forma de ejecutar código javascript y capturar el resultado en una variable es con la función eval(), pero esta manera es poco segura ya que puede ejecutar código malicioso dentro de la aplicación, entonces encontramos esta alternativa que es una API la cual pasándole el código con un console.log() te devuelve el resultado de la ejecución del console.log(). Acá van los links a la API y a un video que explica cómo utilizarla (en el minuto exacto donde lo explica😉):
+https://piston.readthedocs.io/en/latest/api-v2/#response_1
+https://youtu.be/THgBePRV13o?t=1205
 
 ## Decisiones de Modelado
 
@@ -56,7 +58,7 @@ El código Javascript se ejecuta pasándoselo a una función nativa llamada `eva
 ### Relaciones
 
 - `VersionesDeCodigo` tiene muchas `Version`(es)`DeCodigo`
- 
+
 ### Reglas
 
 - Validar que la lista de versiones de código no esté vacía
